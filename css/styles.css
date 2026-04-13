@@ -1,7 +1,7 @@
 /* Variables de color de la plantilla */
 :root {
-    --primary: #FA05FE;
-    --accent: #0056D2;
+    --primary: #cd2dd0;
+    --accent: #6886EA;
     --text: #69727D;
     --light-bg: #F4F7FA;
     --white: #ffffff;
@@ -41,13 +41,23 @@ body {
     width: 100%;
 }
 
-.logo {
-    font-size: 24px;
-    font-weight: 700;
-    color: var(--primary);
+.logo-container {
+    text-decoration: none; /* Elimina el subrayado si lo tuviera */
+    display: flex;
+    align-items: center;
 }
 
-.logo span { color: var(--accent); }
+/* La imagen del logo en sí */
+.logo-img {
+    /* Ajusta este valor según la altura que quieras que tenga tu logo */
+    height: 70px; 
+    
+    /* Esto asegura que el logo no se deforme */
+    width: auto; 
+    
+    /* Opcional: añade un poco de espacio si el logo está muy pegado al menú */
+    margin-right: 10px; 
+}
 
 nav ul { display: flex; list-style: none; align-items: center; }
 
@@ -79,6 +89,27 @@ nav ul li a {
 }
 
 .hero-content { flex: 1; }
+
+/* El título general */
+.hero-content h1 {
+    font-size: 48px;
+    background: linear-gradient(90deg, #FA05FE 0%, #b85eba 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Solo la palabra IA con degradado */
+.hero-content h1 span {
+    background: linear-gradient(90deg, #6886EA 0%, #0DE8DB 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* El párrafo con un color gris suave para que no compita */
+.hero-content p {
+    color: #69727D;
+    max-width: 500px; /* Para que no se estire demasiado */
+}
 
 .badge {
     background: var(--accent);
@@ -113,11 +144,22 @@ nav ul li a {
     flex: 1;
 }
 
+/* El contenedor (Placeholder) */
 .img-placeholder {
     width: 100%;
-    height: 400px;
-    background: #ddd;
-    border-radius: 20px; /* Estilo muy Elementor */
+    height: 450px;       /* O la altura que prefieras */
+    border-radius: 30px; /* Las esquinas redondeadas estilo Elementor */
+    overflow: hidden;    /* ¡VITAL! Corta lo que sobresalga de la imagen */
+    position: relative;
+}
+
+/* La imagen dentro */
+.primera-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   /* Hace que la imagen llene el espacio sin deformarse */
+    object-position: center; /* Centra la imagen si se tiene que recortar algo */
+    display: block;
 }
 
 /* Servicios */
