@@ -1,9 +1,9 @@
 /* Variables de color de la plantilla */
 :root {
-    --primary: #cd2dd0;
-    --accent: #6886EA;
+    --primary: #fb00ff;
+    --accent: #4463ca;
     --text: #69727D;
-    --light-bg: #F4F7FA;
+    --light-bg: #051423;
     --white: #ffffff;
 }
 
@@ -30,7 +30,7 @@ body {
     padding: 20px 0;
     display: flex;
     align-items: center;
-    background: var(--white);
+    background: #051423;
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
@@ -92,22 +92,22 @@ nav ul li a {
 
 /* El título general */
 .hero-content h1 {
-    font-size: 48px;
-    background: linear-gradient(90deg, #FA05FE 0%, #b85eba 100%);
+    font-size: 40px;
+    background: linear-gradient(90deg, #fb00ff 0%, #fd75ff 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 /* Solo la palabra IA con degradado */
 .hero-content h1 span {
-    background: linear-gradient(90deg, #6886EA 0%, #0DE8DB 100%);
+    background: linear-gradient(90deg, #0DE8DB 0%, #6886EA 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 /* El párrafo con un color gris suave para que no compita */
 .hero-content p {
-    color: #69727D;
+    color: white;
     max-width: 500px; /* Para que no se estire demasiado */
 }
 
@@ -119,15 +119,6 @@ nav ul li a {
     font-size: 12px;
     text-transform: uppercase;
 }
-
-.hero-content h1 {
-    font-size: 48px;
-    color: var(--primary);
-    margin: 20px 0;
-    line-height: 1.2;
-}
-
-.hero-content h1 span { color: var(--accent); }
 
 .hero-btns { display: flex; gap: 15px; margin-top: 30px; }
 
@@ -147,7 +138,7 @@ nav ul li a {
 /* El contenedor (Placeholder) */
 .img-placeholder {
     width: 100%;
-    height: 450px;       /* O la altura que prefieras */
+    height: 500px;       /* O la altura que prefieras */
     border-radius: 30px; /* Las esquinas redondeadas estilo Elementor */
     overflow: hidden;    /* ¡VITAL! Corta lo que sobresalga de la imagen */
     position: relative;
